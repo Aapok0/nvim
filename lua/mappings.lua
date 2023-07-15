@@ -16,3 +16,7 @@ key('i', 'jk', '<ESC>', default_opts)
 -------------------------------------------------------
 -- PLUGINS
 -------------------------------------------------------
+
+-- Nvim tree
+key('n', '<LEADER>t', ':NvimTreeToggle<ENTER>', default_opts) -- toggle tree
+key('n', '<LEADER>f', ':NvimTreeFocus<ENTER>', default_opts) -- toggle tree focus

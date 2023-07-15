@@ -16,9 +16,21 @@ return require('packer').startup(function(use)
     -- Let Packer manage itself
     use 'wbthomason/packer.nvim'
 
+    -- Better statusline
+    use {
+        'nvim-lualine/lualine.nvim',
+        requires = { 'nvim-tree/nvim-web-devicons', opt = true }
+    }
+
+    -- Nvim filetree and devicons for filetypes
+    use 'nvim-tree/nvim-tree.lua'
+    use 'nvim-tree/nvim-web-devicons'
+
+    -- More advanced syntax higlighting
+    use 'nvim-treesitter/nvim-treesitter'
+
     -- Better colorschemes
     use 'morhetz/gruvbox'
-    use 'rebelot/kanagawa.nvim'
     use 'ayu-theme/ayu-vim'
 
     if packer_bootstrap then

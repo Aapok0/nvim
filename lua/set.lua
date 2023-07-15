@@ -4,6 +4,7 @@
 
 -- Abbreviated variables to write less when configuring
 local opt = vim.opt -- same as set in vimscript
+local g = vim.g -- global variables
 
 -- Mouse support enabled for all modes
 opt.mouse = 'a'
@@ -86,7 +87,7 @@ opt.showmatch = true
 opt.termguicolors = true
 
 -- Set colorscheme and background
-vim.cmd("colorscheme kanagawa")
+vim.cmd("colorscheme ayu")
 opt.background = 'dark'
 
 -------------------------------------------------------
@@ -114,3 +115,11 @@ opt.textwidth = 300
 
 -- Wrap lines
 opt.wrap = true
+
+-------------------------------------------------------
+-- PLUGINS
+-------------------------------------------------------
+
+-- Disable netrw for nvim tree plugin
+g.loaded_netrw = 1
+g.loaded_netrwPlugin = 1
