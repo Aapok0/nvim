@@ -58,9 +58,13 @@ return require('packer').startup(function(use)
         }
     }
 
+    -- Vim tmux navigator
+    use 'christoomey/vim-tmux-navigator'
+
     -- Better colorschemes
     use 'morhetz/gruvbox'
     use 'ayu-theme/ayu-vim'
+    use { "catppuccin/nvim", as = "catppuccin" }
 
     if packer_bootstrap then
         require('packer').sync()
