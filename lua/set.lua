@@ -13,7 +13,7 @@ opt.mouse = 'a'
 opt.modelines = 0
 
 -- Make sure to have utf8 standard encoding
-opt.encoding = 'utf8'
+opt.fileencoding = 'utf8'
 
 -- Use Unix as the standard file type
 opt.fileformats = 'unix,dos'
@@ -28,11 +28,19 @@ opt.hidden = true
 -- USABILITY
 -------------------------------------------------------
 
+-- Disable backup and swap
+opt.backup = false
+opt.swapfile = false
+
+-- Undofile -> persistent undo
+opt.undofile = true
+opt.undodir = os.getenv('HOME') ..  '/.vim/undodir'
+
 -- Show line number
 opt.number = true
 
 -- Draws signcolumn next to numbers
-opt.signcolumn = 'yes'
+opt.signcolumn = 'auto'
 
 -- Highlight the line your cursor is on
 opt.cursorline = true
@@ -42,6 +50,9 @@ opt.ruler = true
 
 -- When scrolling up or down, keep cursor 10 lines from top or bottom
 opt.scrolloff = 10
+
+-- When scrolling sideways (without wrap), keep cursor 10 lines from right or left
+opt.sidescrolloff = 10
 
 -- Split window right and below
 opt.splitright = true

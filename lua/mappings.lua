@@ -11,12 +11,17 @@ local default_opts = { noremap = true, silent = true }
 g.mapleader = ' '
 
 -- Alias for exiting a mode
-key('i', 'jk', '<ESC>', default_opts)
+key('i', 'jk', '<esc>', default_opts)
+key('v', 'jk', '<esc>', default_opts)
+
+-- Alias for yanking to and pasting from clipboard
+key('v', '<leader>y', '"+y', default_opts)
+key('v', '<leader>p', '"+p', default_opts)
 
 -------------------------------------------------------
 -- PLUGINS
 -------------------------------------------------------
 
 -- Nvim tree
-key('n', '<LEADER>t', ':NvimTreeToggle<ENTER>', default_opts) -- toggle tree
-key('n', '<LEADER>f', ':NvimTreeFocus<ENTER>', default_opts) -- toggle tree focus
+key('n', '<leader>tt', ':NvimTreeToggle<ENTER>', default_opts) -- toggle tree
+key('n', '<leader>tf', ':NvimTreeFocus<ENTER>', default_opts) -- toggle tree focus

@@ -26,8 +26,37 @@ return require('packer').startup(function(use)
     use 'nvim-tree/nvim-tree.lua'
     use 'nvim-tree/nvim-web-devicons'
 
-    -- More advanced syntax higlighting
+    -- Treesitter - more advanced syntax higlighting
     use 'nvim-treesitter/nvim-treesitter'
+    
+    -- Telescope - fuzzy finder for moving between files
+    use {
+        'nvim-telescope/telescope.nvim', tag = '0.1.2',
+        -- or                          , branch = '0.1.x',
+        requires = { {'nvim-lua/plenary.nvim'} }
+    }
+
+    -- LSP and completions - https://github.com/VonHeikemen/lsp-zero.nvim
+    use {
+        'VonHeikemen/lsp-zero.nvim',
+        branch = 'v2.x',
+        requires = {
+            -- LSP Support
+            {'neovim/nvim-lspconfig'},             -- Required
+            {                                      -- Optional
+            'williamboman/mason.nvim',
+            run = function()
+                pcall(vim.cmd, 'MasonUpdate')
+            end,
+            },
+            {'williamboman/mason-lspconfig.nvim'}, -- Optional
+
+            -- Autocompletion
+            {'hrsh7th/nvim-cmp'},     -- Required
+            {'hrsh7th/cmp-nvim-lsp'}, -- Required
+            {'L3MON4D3/LuaSnip'},     -- Required
+        }
+    }
 
     -- Better colorschemes
     use 'morhetz/gruvbox'
