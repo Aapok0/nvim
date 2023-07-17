@@ -23,5 +23,8 @@ key('v', '<leader>p', '"+p', default_opts)
 -------------------------------------------------------
 
 -- Nvim tree
-key('n', '<leader>tt', ':NvimTreeToggle<ENTER>', default_opts) -- toggle tree
-key('n', '<leader>tf', ':NvimTreeFocus<ENTER>', default_opts) -- toggle tree focus
+key('n', '<leader>tt', ':NvimTreeToggle<CR>', default_opts) -- toggle tree
+key('n', '<leader>tf', ':NvimTreeFocus<CR>', default_opts) -- toggle tree focus
+
+-- Undotree
+key('n', '<leader>u', ':UndotreeToggle<CR>', default_opts) -- toggle undotree

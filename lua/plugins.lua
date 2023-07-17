@@ -9,12 +9,20 @@ local ensure_packer = function()
     end
     return false
 end
-  
+
 local packer_bootstrap = ensure_packer()
-  
+
 return require('packer').startup(function(use)
     -- Let Packer manage itself
     use 'wbthomason/packer.nvim'
+
+    -- Startup menu
+    use {
+        'goolord/alpha-nvim',
+        config = function ()
+            require'alpha'.setup(require'alpha.themes.dashboard'.config)
+        end
+    }
 
     -- Better statusline
     use {
@@ -26,9 +34,12 @@ return require('packer').startup(function(use)
     use 'nvim-tree/nvim-tree.lua'
     use 'nvim-tree/nvim-web-devicons'
 
+    -- Undotree - go through old changes
+    use 'mbbill/undotree'
+
     -- Treesitter - more advanced syntax higlighting
     use 'nvim-treesitter/nvim-treesitter'
-    
+
     -- Telescope - fuzzy finder for moving between files
     use {
         'nvim-telescope/telescope.nvim', tag = '0.1.2',
