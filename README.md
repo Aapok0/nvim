@@ -2,10 +2,18 @@
 
 The configurations and plugins I use currently. Packer is used as the package manager and the plugins.lua file installs it automatically.
 
+## Required dependencies
+
 Neovim requires a third-party program to use the system clipboard. I use the the following:
 
 ```bash
 sudo apt-get install xclip
+```
+
+Telescope plugin's live grep requires ripgrep:
+
+```bash
+sudo apt-get install ripgrep
 ```
 
 ## Possible issues
