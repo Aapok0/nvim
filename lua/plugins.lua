@@ -72,6 +72,9 @@ return require('packer').startup(function(use)
     -- Vim tmux navigator
     use 'christoomey/vim-tmux-navigator'
 
+    -- Indent lines
+    use "lukas-reineke/indent-blankline.nvim"
+
     -- Better colorschemes
     use 'morhetz/gruvbox'
     use 'ayu-theme/ayu-vim'

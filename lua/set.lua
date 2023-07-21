@@ -120,6 +120,17 @@ opt.softtabstop = 4
 -- Smart auto indentation
 opt.smartindent = true
 
+-- Characters for tabs and spaces
+vim.opt.list = true
+vim.opt.listchars = {
+    --eol = '⤶',
+    tab = '▷▷',
+    lead = '⋅',
+    trail = '✚',
+    extends = '◀',
+    precedes = '▶',
+}
+
 -- Linebreak after 300 characters nonstop
 opt.linebreak = true
 opt.textwidth = 300

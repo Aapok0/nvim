@@ -1,6 +1,6 @@
 -- https://github.com/nvim-treesitter/nvim-treesitter#modules
 require'nvim-treesitter.configs'.setup {
-    -- A list of parser names, or "all" (the five listed parsers should always be installed)
+    -- A list of parser names, or "all" (c, lua, vim, vimdoc adn query should always be installed)
     ensure_installed = {
         'bash',
         'markdown',
