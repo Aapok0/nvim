@@ -28,3 +28,11 @@ key('n', '<leader>tf', ':NvimTreeFocus<CR>', default_opts) -- toggle tree focus
 
 -- Undotree
 key('n', '<leader>u', ':UndotreeToggle<CR>', default_opts) -- toggle undotree
+
+-- Trouble
+key("n", "<leader>xx", "<cmd>TroubleToggle<cr>", default_opts)
+key("n", "<leader>xw", "<cmd>TroubleToggle workspace_diagnostics<cr>", default_opts)
+key("n", "<leader>xd", "<cmd>TroubleToggle document_diagnostics<cr>", default_opts)
+key("n", "<leader>xl", "<cmd>TroubleToggle loclist<cr>", default_opts)
+key("n", "<leader>xq", "<cmd>TroubleToggle quickfix<cr>", default_opts)
+key("n", "gR", "<cmd>TroubleToggle lsp_references<cr>", default_opts)

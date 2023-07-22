@@ -145,3 +145,8 @@ opt.wrap = true
 -- Disable netrw for nvim tree plugin
 g.loaded_netrw = 1
 g.loaded_netrwPlugin = 1
+
+-- Disable virtual text for diagnostics plugins (using trouble plugin instead)
+vim.diagnostic.config({
+    virtual_text = false,
+})

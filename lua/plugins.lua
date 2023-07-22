@@ -57,7 +57,7 @@ return require('packer').startup(function(use)
             {                                      -- Optional
             'williamboman/mason.nvim',
             run = function()
-                pcall(vim.cmd, 'MasonUpdate')
+                pcall(vim.cmd, 'MasonUpdate') 
             end,
             },
             {'williamboman/mason-lspconfig.nvim'}, -- Optional
@@ -69,11 +69,20 @@ return require('packer').startup(function(use)
         }
     }
 
+    -- Trouble - show diagnostics in a list over statusline
+    use 'folke/trouble.nvim'
+
     -- Vim tmux navigator
     use 'christoomey/vim-tmux-navigator'
 
     -- Indent lines
     use "lukas-reineke/indent-blankline.nvim"
+
+    -- Git plugins
+    -- Gitsigns - show signs of git changes
+    use 'lewis6991/gitsigns.nvim'
+    -- Vim-fugitive - git features in vim
+    use 'tpope/vim-fugitive'
 
     -- Better colorschemes
     use 'morhetz/gruvbox'
