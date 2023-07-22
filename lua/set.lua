@@ -97,9 +97,18 @@ opt.showmatch = true
 -- Use 24-bit color
 opt.termguicolors = true
 
--- Set colorscheme and background
-vim.cmd("colorscheme ayu")
+-- Set colorscheme and background (colorscheme currently set in catpuccin.lua file)
+--vim.cmd("colorscheme catpuccin")
 opt.background = 'dark'
+
+-- Set whitespace characters to dark gray
+vim.cmd('highlight Whitespace guifg=#5A5A5A')
+
+-- Forced transparent background
+--vim.cmd('highlight Normal guibg=None')
+--vim.cmd('highlight NonText guibg=None')
+--vim.cmd('highlight Normal ctermbg=None')
+--vim.cmd('highlight NonText ctermbg=None')
 
 -------------------------------------------------------
 -- INDENTATION AND WRAPPING

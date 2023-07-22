@@ -86,7 +86,8 @@ return require('packer').startup(function(use)
 
     -- Better colorschemes
     use 'morhetz/gruvbox'
-    use 'ayu-theme/ayu-vim'
+    --use 'ayu-theme/ayu-vim'
+    use 'Shatur/neovim-ayu'
     use { "catppuccin/nvim", as = "catppuccin" }
 
     if packer_bootstrap then
