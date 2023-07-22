@@ -129,6 +129,18 @@ opt.softtabstop = 4
 -- Smart auto indentation
 opt.smartindent = true
 
+-- Change indent to 2 spaces with following filetypes
+vim.api.nvim_create_autocmd('FileType', {
+    pattern = {
+        'html',
+        'javascript',
+        'javascriptreact',
+        'typescript',
+        'css',
+    },
+    command = 'setlocal shiftwidth=2 tabstop=2 softtabstop=2'
+})
+
 -- Characters for tabs and spaces
 vim.opt.list = true
 vim.opt.listchars = {
