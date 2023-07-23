@@ -153,8 +153,8 @@ vim.opt.listchars = {
 }
 
 -- Linebreak after 300 characters nonstop
-opt.linebreak = true
-opt.textwidth = 300
+--opt.linebreak = true
+--opt.textwidth = 300
 
 -- Wrap lines
 opt.wrap = true
