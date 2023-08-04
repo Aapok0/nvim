@@ -137,6 +137,9 @@ vim.api.nvim_create_autocmd('FileType', {
         'javascriptreact',
         'typescript',
         'css',
+        'ansible',
+        'terraform',
+        'terraform-vars',
     },
     command = 'setlocal shiftwidth=2 tabstop=2 softtabstop=2'
 })
