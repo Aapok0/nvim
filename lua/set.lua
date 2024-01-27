@@ -140,6 +140,7 @@ vim.api.nvim_create_autocmd('FileType', {
         'ansible',
         'terraform',
         'terraform-vars',
+        'markdown',
     },
     command = 'setlocal shiftwidth=2 tabstop=2 softtabstop=2'
 })

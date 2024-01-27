@@ -16,7 +16,11 @@ key('v', 'jk', '<esc>', default_opts)
 
 -- Alias for yanking to and pasting from clipboard
 key('v', '<leader>y', '"+y', default_opts)
-key('v', '<leader>p', '"+p', default_opts)
+key('n', '<leader>p', '"+p', default_opts)
+
+-- Go back to visual mode when indenting in visual mode
+key('v', '<', '<gv', default_opts)
+key('v', '>', '>gv', default_opts)
 
 -------------------------------------------------------
 -- PLUGINS
