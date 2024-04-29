@@ -1,3 +1,3 @@
 require("set")
 require("mappings")
-require("plugins")
+require("lazynvim")

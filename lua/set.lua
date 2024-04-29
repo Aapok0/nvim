@@ -39,6 +39,9 @@ opt.undodir = os.getenv('HOME') ..  '/.vim/undodir'
 -- Show line number
 opt.number = true
 
+-- Show relative number
+opt.relativenumber = true
+
 -- Draws signcolumn next to numbers
 opt.signcolumn = 'auto'
 

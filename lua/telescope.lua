@@ -1,4 +1,4 @@
--- https://github.com/nvim-telescope/telescope.nvim#usage
+-- Telescope https://github.com/nvim-telescope/telescope.nvim#usage
 local builtin = require('telescope.builtin')
 
 vim.keymap.set('n', '<leader>ff', builtin.find_files, {})
