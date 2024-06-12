@@ -51,6 +51,9 @@ return {
     -- Vim-fugitive - git features in vim
     'tpope/vim-fugitive',
 
+    -- Vim-terraform - syntax highlighting for terraform
+    'hashivim/vim-terraform',
+
     -- Plugins in separate files
 
     -- Better statusline

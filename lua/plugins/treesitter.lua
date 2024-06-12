@@ -16,6 +16,8 @@ return {
                 'typescript',
                 'json',
                 'yaml',
+                'hcl',
+                'terraform',
                 'dockerfile',
                 'c',
                 'lua',
