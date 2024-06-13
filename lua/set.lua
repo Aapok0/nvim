@@ -134,29 +134,30 @@ opt.smartindent = true
 
 -- Change indent to 2 spaces with following filetypes
 vim.api.nvim_create_autocmd('FileType', {
-    pattern = {
-        'html',
-        'javascript',
-        'javascriptreact',
-        'typescript',
-        'css',
-        'ansible',
-        'terraform',
-        'terraform-vars',
-        'markdown',
-    },
-    command = 'setlocal shiftwidth=2 tabstop=2 softtabstop=2'
+  pattern = {
+    'html',
+    'javascript',
+    'javascriptreact',
+    'typescript',
+    'css',
+    'ansible',
+    'terraform',
+    'terraform-vars',
+    'markdown',
+    'lua',
+  },
+  command = 'setlocal shiftwidth=2 tabstop=2 softtabstop=2'
 })
 
 -- Characters for tabs and spaces
 vim.opt.list = true
 vim.opt.listchars = {
-    --eol = '⤶',
-    tab = '▷▷',
-    lead = '⋅',
-    trail = '✚',
-    extends = '◀',
-    precedes = '▶',
+  --eol = '⤶',
+  tab = '▷▷',
+  lead = '⋅',
+  trail = '✚',
+  extends = '◀',
+  precedes = '▶',
 }
 
 -- Linebreak after 300 characters nonstop
@@ -176,5 +177,5 @@ g.loaded_netrwPlugin = 1
 
 -- Disable virtual text for diagnostics plugins (using trouble plugin instead)
 vim.diagnostic.config({
-    virtual_text = false,
+  virtual_text = false,
 })
